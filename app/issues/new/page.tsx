@@ -48,7 +48,7 @@ const NewIssuePage = () => {
       control={control}
       render={({ field })=><SimpleMDE placeholder='Description'{...field} />}
        />
-       {errors.title && <p color="red">{errors.description.message}</p>}
+       {errors.description && <p color="red">{errors.description.message}</p>}
       <Button>Submit</Button>
     </form>
     </div>
