@@ -42,13 +42,13 @@ const NewIssuePage = () => {
       })}>
       <h1 className='text-center font-bold'>Submit New Issue</h1>
       <TextField.Root placeholder='Title' {...register('title')}></TextField.Root>
-      {errors.title && <p color="red">{errors.title.message}</p>}
+      {errors.title && <p className='text-red-500'>{errors.title.message}</p>}
       <Controller 
       name="description"
       control={control}
       render={({ field })=><SimpleMDE placeholder='Description'{...field} />}
        />
-       {errors.description && <p color="red">{errors.description.message}</p>}
+       {errors.description && <p className='text-red-500'>{errors.description.message}</p>}
       <Button>Submit</Button>
     </form>
     </div>
